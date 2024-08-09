@@ -294,6 +294,7 @@ ATCA_STATUS atcac_aes_gcm_decrypt_finish(
     return status;
 }
 
+#if ATCA_CRYPTO_SHA1_EN
 /** \brief Initialize context for performing SHA1 hash in software.
  *
  * \return ATCA_SUCCESS on success, otherwise an error code.
@@ -307,6 +308,7 @@ ATCA_STATUS atcac_sw_sha1_init(
 
     return status;
 }
+
 
 /** \brief Add data to a SHA1 hash.
  *
@@ -342,7 +344,9 @@ ATCA_STATUS atcac_sw_sha1_finish(
 
     return status;
 }
+#endif
 
+#if ATCA_CRYPTO_SHA2_EN
 /** \brief Initialize context for performing SHA256 hash in software.
  *
  * \return ATCA_SUCCESS on success, otherwise an error code.
@@ -391,6 +395,7 @@ ATCA_STATUS atcac_sw_sha2_256_finish(
 
     return status;
 }
+#endif
 
 /** \brief Initialize context for performing CMAC in software.
  *
@@ -459,6 +464,7 @@ ATCA_STATUS atcac_aes_cmac_finish(
     return status;
 }
 
+#if ATCA_CRYPTO_SHA2_HMAC_CTR_EN
 /** \brief Initialize context for performing HMAC (sha256) in software.
  *
  * \return ATCA_SUCCESS on success, otherwise an error code.
@@ -532,6 +538,7 @@ ATCA_STATUS atcac_sha256_hmac_finish(
     }
     return status;
 }
+#endif
 
 /** \brief Set up a public/private key structure for use in asymmetric cryptographic functions
  *

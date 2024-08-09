@@ -162,7 +162,7 @@
 #define ATCAB_AES_CMAC_EN              (ATCAB_AES_CBC_ENCRYPT_EN)
 
 /* Crypto Software SHA Configurations */
-#define ATCAC_SHA1_EN                      (FEATURE_ENABLED)
+#define ATCAC_SHA1_EN                      (FEATURE_DISABLED)
 
 #define ATCAC_SHA256_EN                    (FEATURE_ENABLED)
 

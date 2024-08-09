@@ -124,7 +124,6 @@ enum {
 
 /* Sha digest */
 struct wc_Sha {
-#error here
 #ifdef FREESCALE_LTC_SHA
         ltc_hash_ctx_t ctx;
 #elif defined(WOLFSSL_SE050) && defined(WOLFSSL_SE050_HASH)
@@ -178,13 +177,6 @@ struct wc_Sha {
     typedef struct wc_Sha wc_Sha;
     #define WC_SHA_TYPE_DEFINED
 #endif
-
-#ifdef ATCA_WOLFSSL
-    typedef struct atcac_sha1_ctx
-    {
-        wc_Sha sha;
-    } atcac_sha1_ctx_t;
-#endif 
 
 #endif /* WOLFSSL_TI_HASH */
 

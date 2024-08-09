@@ -198,7 +198,7 @@ extern "C" {
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
 #define NO_MD5
-#define NO_SHA // specifically, no SHA1 (legacy name)
+//#define NO_SHA // specifically, no SHA1 (legacy name)
 #define WOLFSSL_SHA224
 #define WOLFSSL_SHA384
 #define NO_SHA512
@@ -211,6 +211,10 @@ extern "C" {
 #define HAVE_AES_ECB
 #define HAVE_AES_CBC
 #define HAVE_AESGCM
+#define WOLFSSL_AESGCM_STREAM
+#define WOLFSSL_PEM_TO_DER
+#define WOLFSSL_PUB_PEM_TO_DER
+#define OPENSSL_EXTRA_X509_SMALL
 #define NO_RC4
 #define NO_HC128
 #define NO_RABBIT
@@ -231,7 +235,6 @@ extern "C" {
 #define WOLFSSL_BASE64_ENCODE
 #define HAVE_PK_CALLBACKS
 #define WOLFSSL_ATECC608A
-//#define WOLFSSL_AESGCM_STREAM
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/
@@ -241,7 +244,7 @@ extern "C" {
 /* Net Pres RTOS Configurations*/
 #define NET_PRES_RTOS_STACK_SIZE                1024
 #define NET_PRES_RTOS_TASK_PRIORITY             1
-	
+
 
 
 
