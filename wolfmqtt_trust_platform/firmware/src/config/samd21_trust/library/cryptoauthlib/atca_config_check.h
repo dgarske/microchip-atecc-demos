@@ -133,7 +133,7 @@
 
 #ifndef ATCA_NO_HEAP
 #define ATCA_HEAP
-#endif 
+#endif
 
 /** \def ATCA_UNUSED_VAR_CHECK
  * Enables removal of compiler warning due to unused variables
@@ -689,7 +689,7 @@
  * Supported API's: atcab_write
  **/
 #ifndef ATCAC_SHA1_EN
-#define ATCAC_SHA1_EN                       (DEFAULT_ENABLED)
+#define ATCAC_SHA1_EN                       (FEATURE_DISABLED)
 #endif
 
 /** \def ATCAC_SHA256_EN

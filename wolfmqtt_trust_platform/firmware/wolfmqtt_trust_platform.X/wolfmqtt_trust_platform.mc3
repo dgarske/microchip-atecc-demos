@@ -10081,7 +10081,15 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drvWifiWinc" name="DRV_WIFI_WINC_EIC_SRC_0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drvWifiWinc&gt;
   &lt;drvWifiWinc dnOrder=&quot;0&quot; id=&quot;DRV_WIFI_WINC_EIC_SRC_0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drvWifiWinc&quot; value=&quot;false&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drvWifiWinc&gt;
 &lt;/drvWifiWinc&gt;
 </value>
@@ -10247,7 +10255,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="drvWifiWinc" name="DRV_WIFI_WINC_EIC_SRC_SELECT"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;drvWifiWinc&gt;
   &lt;drvWifiWinc dnOrder=&quot;0&quot; id=&quot;DRV_WIFI_WINC_EIC_SRC_SELECT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;drvWifiWinc&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/drvWifiWinc&gt;
 &lt;/drvWifiWinc&gt;
 </value>
@@ -15614,7 +15624,7 @@
       </entry>
       <entry>
          <file>../src/config/samd21_trust/definitions.h</file>
-         <hash>4190e99971a2472d0af3db48b20a6d1b072aead4793ccb7691eaa991881ee411</hash>
+         <hash>c5f13df4ed1214408e5aa65c05f86d4338cdc3e84a0638c7e497e73d0b155e20</hash>
       </entry>
       <entry>
          <file>../src/config/samd21_trust/device.h</file>
@@ -15962,7 +15972,7 @@
       </entry>
       <entry>
          <file>../src/config/samd21_trust/initialization.c</file>
-         <hash>6787a187645e752ec09a505bdc34b688d79c7291659812f5dbdca67428224e13</hash>
+         <hash>d4e359835fdf1833f268a557218cd718fcdc0fc6585b2f3620e956ebec3cee14</hash>
       </entry>
       <entry>
          <file>../src/config/samd21_trust/interrupts.c</file>

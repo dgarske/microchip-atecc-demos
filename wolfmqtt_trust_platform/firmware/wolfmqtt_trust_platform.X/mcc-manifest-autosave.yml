@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: wolfmqtt_trust_platform
-creation_date: 2024-08-07T12:18:27.524-07:00[America/Los_Angeles]
+creation_date: 2024-08-09T12:04:00.886-07:00[America/Los_Angeles]
 operating_system: Mac OS X
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -10,7 +10,7 @@ device_name: ATSAMD21E18A
 compiler: XC32 3.01
 mcc_version: 5.5.0
 mcc_core_version: 5.7.0
-content_manager_version: 5.0.0
+content_manager_version: 5.0.1
 is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/

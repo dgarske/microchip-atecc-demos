@@ -191,6 +191,7 @@ extern "C" {
 #define NO_WRITEV
 #define NO_FILESYSTEM
 #define USE_FAST_MATH
+#define TFM_TIMING_RESISTANT
 #define NO_PWDBASED
 #define HAVE_MCAPI
 #define WOLF_CRYPTO_CB  // provide call-back support
@@ -219,11 +220,13 @@ extern "C" {
 #define NO_HC128
 #define NO_RABBIT
 #define HAVE_ECC
+#define ECC_TIMING_RESISTANT
 #define HAVE_X963_KDF
 #define NO_DH
 #define NO_DSA
 #define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
+#define WC_RSA_BLINDING
 #define WC_RSA_PSS
 #define NO_DEV_RANDOM
 #define HAVE_HASHDRBG
@@ -235,6 +238,17 @@ extern "C" {
 #define WOLFSSL_BASE64_ENCODE
 #define HAVE_PK_CALLBACKS
 #define WOLFSSL_ATECC608A
+#define WOLFSSL_ATECC_TNGTLS
+
+/* Override Current Time */
+/* Allows custom "custom_time()" function to be used for benchmark */
+#define WOLFSSL_USER_CURRTIME
+#define WOLFSSL_GMTIME
+#define USER_TICKS
+extern unsigned long my_time(unsigned long* timer);
+#define XTIME my_time
+
+
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/

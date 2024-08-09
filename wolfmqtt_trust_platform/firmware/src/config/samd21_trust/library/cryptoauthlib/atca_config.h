@@ -172,7 +172,7 @@
 
 #define ATCAC_PBKDF2_SHA256_EN             (ATCAC_SHA256_HMAC_EN)
 
-#define ATCA_CRYPTO_SHA1_EN                (FEATURE_ENABLED)
+#define ATCA_CRYPTO_SHA1_EN                (FEATURE_DISABLED)
 
 /* External Crypto libraries configurations for host side operations */
 

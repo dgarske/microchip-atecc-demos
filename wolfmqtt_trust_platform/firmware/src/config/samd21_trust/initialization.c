@@ -91,7 +91,7 @@ static const WDRV_WINC_SPI_CFG wdrvWincSpiInitData =
 
 static const WDRV_WINC_SYS_INIT wdrvWincInitData = {
     .pSPICfg    = &wdrvWincSpiInitData,
-    .intSrc     = EIC_PIN_-1
+    .intSrc     = EIC_PIN_5
 };
 
 
@@ -105,6 +105,7 @@ static const WDRV_WINC_SYS_INIT wdrvWincInitData = {
 /* Structure to hold the object handles for the modules in the system. */
 SYSTEM_OBJECTS sysObj;
 
+#if 0
 // *****************************************************************************
 // *****************************************************************************
 // Section: Library/Stack Initialization Data
@@ -114,25 +115,24 @@ SYSTEM_OBJECTS sysObj;
 #include "net_pres/pres/net_pres_enc_glue.h"
 
 
-static const NET_PRES_INST_DATA netPresCfgs[] = 
-{  
-        
+static const NET_PRES_INST_DATA netPresCfgs[] =
+{
+
     {
         .pProvObject_ss = NULL,
         .pProvObject_sc = NULL,
         .pProvObject_ds = NULL,
         .pProvObject_dc = NULL,
     },
-        
+
 };
 
-static const NET_PRES_INIT_DATA netPresInitData = 
+static const NET_PRES_INIT_DATA netPresInitData =
 {
     .numLayers = sizeof(netPresCfgs) / sizeof(NET_PRES_INST_DATA),
     .pInitData = netPresCfgs
 };
-  
- 
+#endif
 
 
 
@@ -214,7 +214,7 @@ void SYS_Initialize ( void* data )
     STDIO_BufferModeSet();
 
 
-  
+
     PORT_Initialize();
 
     CLOCK_Initialize();
@@ -224,9 +224,9 @@ void SYS_Initialize ( void* data )
 
     SERCOM3_USART_Initialize();
 
-    NVMCTRL_Initialize( );
-
     SERCOM2_I2C_Initialize();
+
+    NVMCTRL_Initialize( );
 
     SERCOM1_SPI_Initialize();
 
@@ -250,11 +250,11 @@ void SYS_Initialize ( void* data )
     sysObj.drvWifiWinc = WDRV_WINC_Initialize(0, (SYS_MODULE_INIT*)&wdrvWincInitData);
 
 
-    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
+    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -
     H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
-        
+
     sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
-    
+
     /* MISRAC 2012 deviation block end */
 
     CRYPT_WCCB_Initialize();
