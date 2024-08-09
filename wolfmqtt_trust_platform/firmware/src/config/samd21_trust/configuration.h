@@ -231,7 +231,7 @@ extern "C" {
 #define WOLFSSL_BASE64_ENCODE
 #define HAVE_PK_CALLBACKS
 #define WOLFSSL_ATECC608A
-#define WOLFSSL_AESGCM_STREAM
+//#define WOLFSSL_AESGCM_STREAM
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/
