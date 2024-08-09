@@ -38,8 +38,8 @@
 #ifdef ATCA_WOLFSSL
 #include "crypto/atca_crypto_sw.h"
 #include "atca_wolfssl_internal.h"
-#include "wolfssl/wolfssl/internal.h"
-#include "wolfssl/wolfssl/ssl.h"
+#include "third_party/wolfssl/wolfssl/internal.h"
+#include "third_party/wolfssl/wolfssl/ssl.h"
 
 /** \brief Return Random Bytes
  *

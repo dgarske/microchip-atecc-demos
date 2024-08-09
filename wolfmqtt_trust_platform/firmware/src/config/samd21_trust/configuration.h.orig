@@ -171,7 +171,7 @@ extern "C" {
 #define SIZEOF_LONG_LONG 8
 #define WOLFSSL_USER_IO
 #define NO_WRITEV
-//#define MICROCHIP_TCPIP
+#define MICROCHIP_TCPIP
 #define NO_PWDBASED
 #define HAVE_TLS_EXTENSIONS
 #define WOLFSSL_TLS13
@@ -228,10 +228,11 @@ extern "C" {
 #define NO_SIG_WRAPPER
 #define NO_WOLFSSL_MEMORY
 #define WOLF_NO_TRAILING_ENUM_COMMAS
+//#define ATCA_WOLFSSL
 #define WOLFSSL_BASE64_ENCODE
 #define HAVE_PK_CALLBACKS
 #define WOLFSSL_ATECC608A
-#define WOLFSSL_AESGCM_STREAM
+//#define WOLFSSL_AESGCM_STREAM
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/

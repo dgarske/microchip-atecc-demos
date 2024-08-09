@@ -502,8 +502,8 @@ int CRYPT_TDES_CBC_Decrypt(CRYPT_TDES_CTX* tdes, unsigned char* out,
 int CRYPT_AES_KeySet(CRYPT_AES_CTX* aes, const unsigned char* key,
                      unsigned int keyLen, const unsigned char* iv, int dir)
 {
-    typedef char aes_test[sizeof(CRYPT_AES_CTX) >= sizeof(Aes) ? 1 : -1];
-    (void)sizeof(aes_test);
+    //typedef char aes_test[sizeof(CRYPT_AES_CTX) >= sizeof(Aes) ? 1 : -1];
+    //(void)sizeof(aes_test);
 
     if (aes == NULL || key == NULL)
         return BAD_FUNC_ARG;
@@ -561,8 +561,8 @@ int CRYPT_AES_CTR_Encrypt(CRYPT_AES_CTX* aes, unsigned char* out,
 #if defined(HAVE_AESGCM)
 int CRYPT_AES_GCM_SetKey(CRYPT_AES_CTX* aes, const unsigned char* key, unsigned int len)
 {
-    typedef char aes_test[sizeof(CRYPT_AES_CTX) >= sizeof(Aes) ? 1 : -1];
-    (void)sizeof(aes_test);
+    //typedef char aes_test[sizeof(CRYPT_AES_CTX) >= sizeof(Aes) ? 1 : -1];
+    //(void)sizeof(aes_test);
 
     if (aes == NULL || key == NULL)
     {

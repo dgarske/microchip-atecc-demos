@@ -26,10 +26,14 @@
  */
 
 
-#include "atca_crypto_sw_sha1.h"
+#include "atca_config.h"
 #include "hashes/sha1_routines.h"
+#include "atca_crypto_sw_sha1.h"
 #include "cryptoauthlib.h"
 #include "cal_internal.h"
+#include "atca_crypto_sw.h"
+
+
 
 #if ATCA_CRYPTO_SHA1_EN
 /** \brief Initialize context for performing SHA1 hash in software.

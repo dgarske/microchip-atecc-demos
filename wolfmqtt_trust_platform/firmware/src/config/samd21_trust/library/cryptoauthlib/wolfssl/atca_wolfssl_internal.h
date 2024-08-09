@@ -62,18 +62,16 @@ extern "C" {
 #include "wolfssl/wolfcrypt/asn_public.h"
 #include "wolfssl/wolfcrypt/asn.h"
 #include "wolfssl/wolfcrypt/random.h"
-
-typedef struct atcac_aes_gcm_ctx
+    
+    typedef struct atcac_aes_gcm_ctx
 {
     Aes      aes;
     uint8_t  iv[AES_BLOCK_SIZE];
     uint16_t iv_len;
 } atcac_aes_gcm_ctx_t;
 
-typedef struct atcac_sha1_ctx
-{
-    wc_Sha sha;
-} atcac_sha1_ctx_t;
+/* Removed atcac_sha1_ctx struct and added to sha.h, wc_Sha 
+ * wasn't pulled by sha.h */
 
 typedef struct atcac_sha2_256_ctx
 {
